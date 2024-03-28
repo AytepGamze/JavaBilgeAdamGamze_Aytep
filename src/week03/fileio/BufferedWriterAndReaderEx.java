@@ -6,11 +6,12 @@ public class BufferedWriterAndReaderEx {
     public static void main(String[] args) throws IOException {
         FileWriter fw = new FileWriter("buffered.txt");
         BufferedWriter bw =new BufferedWriter(fw);
-        bw.write("hello");
-        bw.write("world");
-        bw.newLine();
-        bw.write("java");
-        bw.close();
+        BufferedWriter bw2 = new BufferedWriter(bw);
+        bw2.write("gamze çok konuştu");
+        bw2.newLine();
+        bw2.close();
+        fw.close();
+
         fw.close();
 
 
