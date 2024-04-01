@@ -1,4 +1,4 @@
-package week03.oop.principles.inheritance;
+package week03.oop.principles.inheritance.example01;
 
 public class Animal {
     String name;
