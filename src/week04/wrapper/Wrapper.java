@@ -8,8 +8,8 @@ public class Wrapper {
         Boolean b4 = new Boolean("tRue");
         Boolean b5 = new Boolean("tRUe");
         Boolean b6 = new Boolean("False");
-        System.out.println("----- Boolean-----");
 
+        System.out.println("---Boolean---");
         System.out.println(b1);
         System.out.println(b2);
         System.out.println(b3);
@@ -17,27 +17,24 @@ public class Wrapper {
         System.out.println(b5);
         System.out.println(b6);
 
-        System.out.println("\n----- Byte-----");
+
+        System.out.println("\n---Byte---");
         Byte byte1 = new Byte((byte)5);
         Byte byte2 = new Byte("50");
         System.out.println(byte1);
         System.out.println(byte2);
 
-        System.out.println("\n----- Integer-----");
+        System.out.println("\n---Integer---");
         Integer integer1 = new Integer(10);
         Integer integer2 = new Integer("15");
-        System.out.println(integer1);
-        System.out.println(integer2);
-
         Integer integerSum = integer1 + integer2;
-        int intSum = integer1 + integer2;
-        int num1 = 10;
-        int num2 = 20;
-        Integer intSums = num1 + num2;
+        int intSum = integer1+integer2;
+        int number1 = 10;
+        int number2 = 20;
+        Integer intSums = number1+ number2;
+
         System.out.println(integer1);
         System.out.println(integer2);
-
-
 
         Long long1 = 100L;
         long primitiveLong = 100;
@@ -49,10 +46,6 @@ public class Wrapper {
         Character character3 = new Character('A');
         System.out.println(character3);
         System.out.println("AAA" + "AAA");
-
-
-
-
     }
 
 }

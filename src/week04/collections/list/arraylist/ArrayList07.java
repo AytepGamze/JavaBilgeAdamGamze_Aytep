@@ -14,79 +14,9 @@ public class ArrayList07 {
         List<String> thirdList = new ArrayList<>();
         thirdList.add("ReactJS");
 
-        firstList.addAll(secondList);
-        System.out.println(firstList
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        );
-
+        secondList.addAll(firstList);
+        thirdList.addAll(secondList);
+        System.out.println(thirdList);
     }
+
 }

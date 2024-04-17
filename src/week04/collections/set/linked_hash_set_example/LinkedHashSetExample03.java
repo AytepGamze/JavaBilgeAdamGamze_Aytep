@@ -20,7 +20,7 @@ public class LinkedHashSetExample03 {
         System.out.println(oddNumbers);
 
         oddNumbers.removeAll(oddNumbers);
-        System.out.println("after removeAll");
+        System.out.println("after remveAll");
         System.out.println(oddNumbers);
 
 

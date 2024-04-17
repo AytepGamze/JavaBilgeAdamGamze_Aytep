@@ -5,7 +5,8 @@ import java.util.List;
 
 public class ArrayList01 {
     public static void main(String[] args) {
-        // Array sınıfını kullanarak bir list ürettik.
+
+        // ArrayList sınıfını kullanarak bir List ürettik.
         List<Integer> numberList = new ArrayList<>();
         // Listemize elemanlar ekledik.
         numberList.add(1);
@@ -13,13 +14,13 @@ public class ArrayList01 {
         numberList.add(3);
         System.out.println("List : " + numberList);
         // Listeden bir indexe erişim.
-        int number= numberList.get(2); // auto unboxing
-        System.out.println(number);
+        int number = numberList.get(2); //auto unboxing
+        System.out.println("Accessed element : " + number);
 
-
-        // Listeden bir ögenin kaldırılması
-        int removedNumber= numberList.remove(1);
-        System.out.println("Removed element: " + removedNumber);
+        // Listeden bir indexin kaldırılması.
+        int removedNumber = numberList.remove(1);
+        System.out.println("Removed Element : " + removedNumber);
         System.out.println("List : " + numberList);
+
     }
 }

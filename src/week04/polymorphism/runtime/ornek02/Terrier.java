@@ -1,7 +1,8 @@
 package week04.polymorphism.runtime.ornek02;
 
 public class Terrier extends Dog{
-    int size= 2;
+
+    int size = 2;
 
     @Override
     void feetSize() {
