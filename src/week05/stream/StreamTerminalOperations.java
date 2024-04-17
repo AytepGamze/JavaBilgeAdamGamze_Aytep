@@ -2,6 +2,8 @@ package week05.stream;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
@@ -96,5 +98,85 @@ public class StreamTerminalOperations {
             list01.add(sUpper);
         } );
         System.out.println(list01);
+
+
+        //map() vs forEach()
+        // forEach void döner, dolayısıyla içerisinde de void dönen bir işlem olmalı
+
+        List<Integer> numbers= Arrays.asList(1,2,3,4,5);
+        numbers.forEach(number -> System.out.println(number*2));
+        System.out.println(numbers);
+
+        //map()
+        List<Integer> mappedNumbers= numbers.stream()
+                .map(number -> number * 2)
+                .map(number -> number * 2)
+                .collect(Collectors.toList());
+                mappedNumbers.forEach(System.out::println);
+                mappedNumbers= mappedNumbers.stream().map(number -> number*2).collect(Collectors.toList());
+               // .stream()
+               // .map(number -> number * 2)
+             //   .collect(Collectors.toList());
+
+        System.out.println(mappedNumbers);
+
+        Stream<Integer> stream= Stream.of(3,5,6);
+        Stream<Integer> stream2= Stream.of(3,5,6);
+
+        System.out.println(stream.reduce(10,(a,b) -> a*b));
+        System.out.println(stream2.reduce((a,b) -> a*b));
+
+
+        Stream<String> stream03= Stream.of("w1","o2","l3", "f4");
+
+        String word= stream03.reduce("X", String::concat);
+        System.out.println(word);
+
+
+
+        Stream<String> stream04= Stream.of("w", "o", "l", "f");
+        String word2= String.valueOf(stream04.reduce((c,d) -> c+ "--"+d));
+        System.out.println(word2);
+
+
+
+        // collect()
+        String frenchCounting= "un:deux:trois:quatre";
+        List<String> gmailList= Arrays.stream(Pattern.compile(":")
+                .split(frenchCounting)).collect(Collectors.toList());
+        System.out.println(gmailList);
+
+        Set<String> gmailSet= Pattern.compile(":")
+                .splitAsStream(frenchCounting).collect(Collectors.toSet());
+        System.out.println(gmailSet);
+
+
+        //collect(Collectors.toMap())
+        Map<String, Integer> nameLength= Stream.of("Albus", "Percival", "Wulfric", "Brian", "Dumbledore")
+                .collect(Collectors.toMap(name -> name, String::length));
+        System.out.println(nameLength);
+
+        Optional<String> name= Stream.of("Albus", "Percival", "Wulfric", "Brian", "Dumbledore")
+                .reduce(String::concat);
+
+       // StringBuilder
+        Stream<String> stream05= Stream.of("w", "o", "l", "f");
+        StringBuilder word3= stream05
+                .collect(StringBuilder::new
+                //(a,b)
+                ,StringBuilder::append //a
+                ,StringBuilder::append); //b
+        System.out.println(word3);
+
+
+        Stream<String> stream06= Stream.of("w", "o", "l", "f");
+        TreeSet<String> set= stream06.collect(Collectors.toCollection(TreeSet::new));
+        System.out.println(set);
+
+
+
+
+
+
     }
 }

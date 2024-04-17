@@ -23,5 +23,6 @@ public class ConsumerTest04 {
         };
 
         productList.forEach(consumer);
+
     }
 }
