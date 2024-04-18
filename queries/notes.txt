@@ -1,0 +1,3 @@
+Bir tablo nasıl görüntülenir;
+1 - database'i aç (postgres)
+2- schemas' ı aç
