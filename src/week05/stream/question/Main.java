@@ -1,6 +1,5 @@
 package week05.stream.question;
 
-import java.util.Random;
 
 public class Main {
 
@@ -14,11 +13,14 @@ public class Main {
      * 5- Öğrencilerin isimleri ve öğrencilerin notlarını yazdıran bir stream.
      */
     public static void main(String[] args) {
-        Random random = new Random();
-        Student student= new Student("Gamze", "Aytep", random.nextInt());
 
 
 
-    }
+
+// TODO kodların orijinal halini git'ten çek
+
+
+
+        }
 
 }
